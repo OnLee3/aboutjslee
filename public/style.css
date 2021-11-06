@@ -34,9 +34,10 @@ h1 {
 }
 
 h2 {
-  font-size: 32px;
+  padding-top: 80px;
+  font-size: 48px;
   font-weight: bolder;
-  margin-bottom: 80px;
+  align-self: center;
 }
 
 h3 {
@@ -79,14 +80,14 @@ header nav {
 header nav ul {
   width: 100%;
   display: grid;
-  grid-template-columns: 8fr 1fr 1fr;
+  grid-template-columns: 8fr 1fr 1fr 1fr;
   text-transform: uppercase;
   font-weight: bold;
 }
 
 header nav ul li {
   font-size: 18px;
-  text-align: right;
+  text-align: center;
 }
 
 header nav ul li h1 {
@@ -101,7 +102,8 @@ header nav ul li h1 a {
 .header__title,
 .infoBtn,
 .workBtn,
-.heroBtn {
+.heroBtn,
+.contactBtn {
   cursor: pointer;
 }
 
@@ -126,10 +128,13 @@ section.hero {
   padding-top: 0;
 }
 
-section.hero article.hero__info {
+section.hero article {
+  height: 100%;
   justify-self: center;
   align-self: center;
   padding: 0px 20px;
+  display: flex;
+  flex-direction: column;
 }
 
 .hero__img {
@@ -144,8 +149,21 @@ section.hero article.hero__info {
   filter: brightness(50%);
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 1000px) {
   header nav ul {
     gap: 40px;
   }
+}
+
+.info__contents {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.contact {
+  background-color: rgb(192, 196, 238);
+  width: 100%;
+  height: 15vh;
 }
