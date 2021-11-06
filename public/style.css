@@ -1,5 +1,13 @@
 @import url(_reset.css);
 
+@font-face {
+  font-family: "RIDIBatang";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_twelve@1.0/RIDIBatang.woff")
+    format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 :root {
   --header-width: 80px;
 }
@@ -8,10 +16,30 @@
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: 24px;
+  font-weight: bolder;
+}
+
+h2 {
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 40px;
+  margin-left: 20px;
+}
+
+a:hover {
+  font-style: italic;
+}
+
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-  height: 1000vh;
+  font-family: "RIDIBatang", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   background-color: rgb(246, 245, 255);
   padding-top: var(--header-width);
 }
@@ -35,6 +63,7 @@ header nav ul {
   display: grid;
   grid-template-columns: 8fr 1fr 1fr;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 header nav ul li {
@@ -82,10 +111,16 @@ section.hero {
   object-fit: cover;
   width: 100%;
   border-radius: 25px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   section.hero {
     grid-template-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px;
+  }
+  header nav ul {
+    gap: 40px;
   }
 }
