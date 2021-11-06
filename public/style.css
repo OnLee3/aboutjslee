@@ -80,6 +80,7 @@ header {
   display: flex;
   align-items: center;
   padding: 0px 40px;
+  z-index: 3;
 }
 
 header nav {
@@ -114,12 +115,6 @@ li a {
   color: black;
 }
 
-.info {
-  width: 100px;
-  height: 100px;
-  background-color: black;
-}
-
 main {
   width: 100%;
   display: flex;
@@ -128,8 +123,8 @@ main {
 
 section.hero {
   width: 100%;
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  flex-direction: column;
   align-content: center;
   padding-top: 0;
 }
@@ -171,6 +166,27 @@ section.hero article {
   .contact__info {
     font-size: 11px;
   }
+  .hero__work .work__contents {
+    padding: 0px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .hero__work .work__contents .work__content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .hero__work .work__contents .work__content .content__wrapper {
+    order: 3;
+  }
+
+  .work__contents .work__movie,
+  .work__youtube,
+  .work__zoom {
+  }
 }
 
 .info__contents {
@@ -181,20 +197,52 @@ section.hero article {
 }
 
 .hero__work {
-  width: 60%;
+  width: 100%;
 }
 
 .work__contents {
+  width: 100%;
+  padding: 0px 120px;
   padding-top: 80px;
   display: grid;
   grid-template-columns: 1fr;
-  gap: 1px;
+  gap: 5px;
+  justify-items: center;
 }
 
-.work__contents div {
+.work__content {
+  width: 100%;
+  border-radius: 25px;
+  padding: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+}
+
+.content__wrapper {
+  order: 1;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.content__wrapper h3 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.content__wrapper a {
+  font-size: 24px;
+  font-weight: 500;
+  color: black;
+}
+
+.work__contents .work__movie,
+.work__youtube,
+.work__zoom {
+  aspect-ratio: 1;
   margin-bottom: 20px;
-  height: 50vh;
-  background-color: black;
   background-size: cover;
   background-position: center center;
   border-radius: 25px;
@@ -205,6 +253,7 @@ section.hero article {
 }
 
 .work__youtube {
+  order: 2;
   background-image: url(img/work2.png);
 }
 
