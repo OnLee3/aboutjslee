@@ -167,3 +167,19 @@ section.hero article {
   width: 100%;
   height: 15vh;
 }
+
+.hero__work {
+  width: 60%;
+}
+
+.work__contents {
+  padding-top: 80px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+}
+
+.work__contents div {
+  background-color: black;
+  aspect-ratio: 1;
+}
