@@ -23,6 +23,22 @@ h1 {
   font-weight: bolder;
 }
 
+.hidden {
+  opacity: 0;
+}
+
+.console__container {
+  width: 100%;
+  height: 100vh;
+  background-color: #111;
+  font-size: 4em;
+  text-align: center;
+  color: white;
+}
+
+.console__underscore {
+}
+
 .hero__title {
   position: absolute;
   top: 50%;
@@ -213,6 +229,7 @@ section.hero article {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
+  margin-bottom: 60px;
 }
 
 .content__wrapper {
@@ -224,7 +241,7 @@ section.hero article {
 }
 
 .content__wrapper h3 {
-  font-size: 36px;
+  font-size: 32px;
   margin-bottom: 40px;
 }
 
@@ -251,7 +268,7 @@ section.hero article {
   margin-bottom: 20px;
   background-size: cover;
   background-position: center center;
-  border-radius: 25px;
+  border-radius: 50px;
 }
 
 .work__movie {
