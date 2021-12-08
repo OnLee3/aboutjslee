@@ -26,7 +26,7 @@ contactBtn.addEventListener("click", (e) => {
 })
 
 // 콘솔이펙트 타이틀
-consoleText(['안녕하세요', '이재석 입니다.', '잘 부탁드립니다 :)'], 'text',['#111','#111', '#111']);
+consoleText(['안녕하세요.', '이재석 입니다.', '잘 부탁드립니다 :)'], 'text',['#111','#111', '#111']);
 
 function consoleText(words, id, colors) {
   if (colors === undefined) colors = ['#fff'];
