@@ -5,20 +5,20 @@ const contactBtn = document.querySelector(".contactBtn");
 
 heroBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    document.querySelector(".hero__img").scrollIntoView(true);
+    document.querySelector(".hero__img").scrollIntoView({behavior: "smooth"});
 })
 
 infoBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    document.querySelector(".hero__info").scrollIntoView(true);
+    document.querySelector(".hero__info").scrollIntoView({behavior: "smooth"});
 })
 
 workBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    document.querySelector(".hero__work").scrollIntoView(true);
+    document.querySelector(".hero__work").scrollIntoView({behavior: "smooth"});
 })
 
 contactBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    document.querySelector(".contact").scrollIntoView(true);
+    document.querySelector(".contact").scrollIntoView({behavior: "smooth"});
 })
