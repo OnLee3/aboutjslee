@@ -7,12 +7,12 @@ const contactBtn = document.querySelector(".contactBtn");
 
 heroBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    document.querySelector(".hero__img").scrollIntoView({behavior: "smooth"});
+    document.querySelector(".hero").scrollIntoView({behavior: "smooth"});
 })
 
 infoBtn.addEventListener("click", (e) => {
     e.preventDefault();
-    document.querySelector(".hero__info").scrollIntoView({behavior: "smooth"});
+    document.querySelector(".info__contents").scrollIntoView({behavior: "smooth"});
 })
 
 workBtn.addEventListener("click", (e) => {
